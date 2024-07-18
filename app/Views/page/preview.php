@@ -10,7 +10,26 @@
 	<!-- Exibi senha -->
 	<div class="text-center">
 		<h2 class="h1">Senha</h2>
-		<h1 class="fw-bold" style="font-size: 20rem">10</h1>
+		<h1 class="fw-bold" id="code" style="font-size: 20rem">10</h1>
 	</div>
 
 </div>
+
+<script>
+	let eventSource = new EventSource('/?route=/event')
+	let currentID
+
+	eventSource.addEventListener('password', e => {
+		let response = JSON.parse(e.data)
+		
+		currentID ? currentID : response.id
+
+		if (currentID != response.id) {
+			updatePassword(response.code)
+		}
+	})
+
+	function updatePassword(code) {
+		document.querySelector('#code').innerText = code
+	}
+</script>
