@@ -14,4 +14,12 @@ class Page extends Controller
 	{
 		echo $this->view->render('page/control');
 	}
+
+	/**
+	 * Página para exibir senhas
+	 */
+	public function preview(): void
+	{
+		echo $this->view->render('page/preview'); 
+	}
 }
