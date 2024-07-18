@@ -7,4 +7,4 @@ use CoffeeCode\Router\Router;
  */
 $router->namespace("App\Controllers");
 
-$router->get("/", "Page:control");
+$router->get("/", "Page:control", 'page.control');
