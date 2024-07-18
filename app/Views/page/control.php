@@ -4,7 +4,7 @@
 
 	<!-- Botão para abrir tela de senha -->
 	<div class="mb-3 text-end">
-		<a class="btn btn-light" href="#"><i class="bi bi-box-arrow-up-right"></i> Tela de senha</a>
+		<a class="btn btn-light" href="/?route=/senha" target="_blank"><i class="bi bi-box-arrow-up-right"></i> Tela de senha</a>
 	</div>
 
 	<!-- Form para chamar senha -->
